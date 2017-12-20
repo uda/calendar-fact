@@ -10,11 +10,19 @@ Install by running:
 pip install calendar-fact
 ```
 
-## Usage
+## Usage in shell
 
 Run:
 ```shell
 calendar-fact
+```
+
+## Usage in code
+
+```python
+from calendar_fact import get_fact
+
+new_fact = get_fact()
 ```
 
 ## License
