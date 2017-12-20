@@ -15,7 +15,7 @@ setup(
     long_description=long_description,
     author='Yehuda Deutsch',
     author_email='yeh@uda.co.il',
-    url='https://gitlab.com/uda/calendar_fact',
+    url='https://gitlab.com/uda/calendar-fact',
     license='MIT',
     packages=["calendar_fact"],
     classifiers=[

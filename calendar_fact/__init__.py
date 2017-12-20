@@ -1,6 +1,6 @@
 from random import choice
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 fact_list = [
     f'the {choice(["fall", "spring"])} equinox',
