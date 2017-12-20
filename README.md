@@ -19,4 +19,7 @@ calendar-fact
 
 ## License
 
-MIT
+The code is released under the MIT license.
+
+The texts are released under the CC-BY-NC 2.5 license as explained at
+[XKCD's license](https://xkcd.com/license.html) page.
