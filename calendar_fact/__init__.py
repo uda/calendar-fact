@@ -1,6 +1,6 @@
 from random import choice
 
-__version__ = '1.1.0'
+__version__ = '1.2.0'
 
 event_list = [
     f'the {choice(["fall", "spring"])} equinox',
