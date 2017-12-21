@@ -2,7 +2,7 @@ from random import choice
 
 __version__ = '1.1.0'
 
-fact_list = [
+event_list = [
     f'the {choice(["fall", "spring"])} equinox',
     f'the {choice(["winter", "summer"])} {choice(["solstice", "olympics"])}',
     f'the {choice(["earliest", "latest"])} {choice(["sunrise", "sunset"])}',
@@ -14,7 +14,7 @@ fact_list = [
     f'shark week',
 ]
 
-occurrence_3_list = [
+recurrence_3_list = [
     'sun',
     'moon',
     'zodiac',
@@ -22,9 +22,9 @@ occurrence_3_list = [
     'atomic clock in colorado',
 ]
 
-occurrence_list = [
+recurrence_list = [
     f'happens {choice(["earlier", "later", "at the wrong time"])} every year',
-    f'drifts out of sync with the {choice(occurrence_3_list)}',
+    f'drifts out of sync with the {choice(recurrence_3_list)}',
     f'might {choice(["not happen", "happen twice"])} this year',
 ]
 
@@ -81,7 +81,7 @@ trivia_list = [
 
 def get_fact(separator=' '):
     parts = [
-        f'Did you know that {choice(fact_list)} {choice(occurrence_list)} because of {choice(cause_list)}?',
+        f'Did you know that {choice(event_list)} {choice(recurrence_list)} because of {choice(cause_list)}?',
         f'apparently {choice(effect_list)}.',
         f'While it may seem like trivia, it {choice(trivia_list)}.',
     ]
