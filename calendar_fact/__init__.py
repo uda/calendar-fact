@@ -1,6 +1,6 @@
 from random import choice
 
-__version__ = '1.0.3'
+__version__ = '1.1.0'
 
 fact_list = [
     f'the {choice(["fall", "spring"])} equinox',
@@ -70,10 +70,18 @@ effect_list = [
     'it\'s getting worse and no one knows why',
 ]
 
+trivia_list = [
+    'causes huge headaches for software developers',
+    'is taken advantage of by high-speed traders',
+    'triggered the 2003 Northeast Blackout',
+    'has to be corrected for by GPS satellites',
+    'is now recognized as a major cause of World War I',
+]
+
 
 def get_fact():
     return f'Did you know that {choice(fact_list)} {choice(occurrence_list)} because of {choice(cause_list)}? ' \
-           f'apparently {choice(effect_list)}.'
+           f'apparently {choice(effect_list)}. While it may seem like trivia, it {choice(trivia_list)}.'
 
 
 def run():
