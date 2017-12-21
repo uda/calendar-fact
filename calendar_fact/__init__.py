@@ -79,14 +79,31 @@ trivia_list = [
 ]
 
 
-def get_fact():
-    return f'Did you know that {choice(fact_list)} {choice(occurrence_list)} because of {choice(cause_list)}? ' \
-           f'apparently {choice(effect_list)}. While it may seem like trivia, it {choice(trivia_list)}.'
+def get_fact(separator=' '):
+    parts = [
+        f'Did you know that {choice(fact_list)} {choice(occurrence_list)} because of {choice(cause_list)}?',
+        f'apparently {choice(effect_list)}.',
+        f'While it may seem like trivia, it {choice(trivia_list)}.',
+    ]
+    return separator.join(parts)
 
 
-def run():
-    print(get_fact())
+def run(separator=' '):
+    print(get_fact(separator))
 
 
 if __name__ == '__main__':
-    run()
+    from argparse import ArgumentParser
+
+    parser = ArgumentParser(description='Print a calendar fact from https://xkcd.com/1930/')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--separator', type=str,
+                       help='A separator between sections, default: a space (" ")', default=' ')
+    group.add_argument('-n', '--new-line', action='store_true', help='Separate sections with a new line')
+    args = parser.parse_args()
+
+    separator = args.separator
+    if args.new_line:
+        separator = '\n'
+
+    run(separator)
